@@ -1,0 +1,14 @@
+{
+    "name": "assembleevirtuelle/mana-bundle",
+    "description": "Webfinger integration for Symfony",
+    "type": "symfony-bundle",
+    "license": "GPL3",
+    "authors": [
+        {
+            "name": "Michel Cadennes",
+            "email": "michel.cadennes@assemblee-virtuelle.org"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
