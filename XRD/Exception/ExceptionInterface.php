@@ -14,6 +14,6 @@ namespace AssembleeVirtuelle\ManaBundle\XRD\Exception;
  *
  * @author Michel Cadennes <michel.cadennes@assemblee-virtuelle.org>
  */
-interface ExceptionInterface implements \Throwable
+interface ExceptionInterface extends \Throwable
 {
 }
