@@ -3,8 +3,6 @@
 /**
  * This file is part of the ManaBundle, a WebFinger library for Symfony
  *
- * PHP version 7
- *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
@@ -60,24 +58,4 @@ interface LoaderInterface
   * @return void
   */
   public function build ($object);
-
-  /**
-   * Loads the Property elements
-   *
-   * @param PropertyListAccess $store Data store where the properties get saved
-   * @param object             $j     An object with "properties" property
-   *
-   * @return boolean True when all went well
-   */
-  protected function loadProperties (PropertyListAccess $store, $j);
-
-  /**
-   * Creates a link element object
-   *
-   * @param object $j
-   *
-   * @return Link Created link object
-   */
-  protected function loadLink ($j);
-
 }
