@@ -1,58 +1,63 @@
 <?php
 
 /**
- * Part of XML_XRD
+ * This file is part of the ManaBundle, a WebFinger library for Symfony
  *
- * PHP version 5
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  *
- * @category XML
- * @package  XML_XRD
- * @author   Christian Weiske <cweiske@php.net>
- * @license  http://www.gnu.org/copyleft/lesser.html LGPL
- * @link     http://pear.php.net/package/XML_XRD
+ * @package  ManaBundle
+ * @subpackage XRD
+ * @author   Michel Cadennes <michel.cadennes@assemblee-virtuelle.org>
+ * @license  https://opensource.org/licenses/GPL-3.0 GNU General Public License v3
+ * @link https://github.com/assemblee-virtuelle/ManaBundle/tree/master/XRD/README.md
+ * @version 0.1.0
  */
 
 namespace AssembleeVirtuelle\ManaBundle\XRD\Exception;
 
 /**
- * XML_XRD exception that's thrown when loading the XRD fails.
- *
- * @category XML
- * @package  XML_XRD
- * @author   Christian Weiske <cweiske@php.net>
- * @license  http://www.gnu.org/copyleft/lesser.html LGPL
- * @version  Release: @package_version@
- * @link     http://pear.php.net/package/XML_XRD
+ * Exception that's thrown when loading the XRD fails.
  */
 class LoaderException extends \Exception implements ExceptionInterface
 {
-    /**
-     * The document namespace is not the XRD 1.0 namespace
-     */
-    const DOC_NS = 10;
+  /**
+   * The document namespace is not the XRD 1.0 namespace
+   */
+  const DOCUMENT_NAMESPACE = 100;
 
-    /**
-     * The document root element is not XRD
-     */
-    const DOC_ROOT = 11;
+  /**
+   * The document root element is not XRD
+   */
+  const DOCUMENT_ROOT = 101;
 
-    /**
-     * Error loading the XML|JSON file|string
-     */
-    const LOAD = 12;
+  /**
+   * Error loading the XML|JSON file|string
+   */
+  const LOADING_ERROR = 102;
 
-    /**
-     * Unsupported XRD file/string type (no loader)
-     */
-    const NO_LOADER = 13;
+  /**
+   * Unsupported XRD file/string type (no loader)
+   */
+  const UNSUPPORTED_LOADER = 103;
 
-    /**
-     * Error opening file
-     */
-    const OPEN_FILE = 14;
+  /**
+   * Error opening file
+   */
+  const OPENING_FILE_ERROR = 104;
 
-    /**
-     * Detecting the file type failed
-     */
-    const DETECT_TYPE = 20;
+  /**
+   * Detecting the file type failed
+   */
+  const UNKNOWN_TYPE = 105;
+
+  /*
+   * An inexistant property is requested
+   */
+  const PROPERTY_ERROR = 106;
+
+  /*
+   * Type mismatch for a given property
+   */
+  const TYPE_ERROR = 107;
 }
