@@ -8,29 +8,27 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @category XML
  * @package  ManaBundle
+ * @subpackage XRD
  * @author   Michel Cadennes <michel.cadennes@assemblee-virtuelle.org>
- * @license  http://www.gnu.org/copyleft/lesser.html LGPL
- * @link
+ * @license  https://opensource.org/licenses/GPL-3.0 GNU General Public License v3
+ * @link https://github.com/assemblee-virtuelle/ManaBundle/tree/master/XRD/README.md
+ * @version 0.1.0
  */
 
-namespace AssembleeVirtuelle\ManaBundle\XRD\Loader;
+namespace App\Loader;
 
-/**
- * @author Michel Cadennes <michel.cadennes@assemblee-virtuelle.org>
- */
 interface LoaderInterface
 {
   /**
   * Loads an XRD profile from a source
   *
-  * @param string $source Source of information
-  * @param int $type type of the source : file or raw string
+  * @param string $source Source of data
+  * @param int    $type   Type of the source : file or raw string
   *
   * @return void
   */
-  public function load(string $source, int $type);
+  public function load (string $source, int $type);
 
   /**
    * Loads the contents of the given file
@@ -41,7 +39,7 @@ interface LoaderInterface
    *
    * @throws LoaderException When the JSON is invalid or cannot be loaded
    */
-  public function loadFromFile($file);
+  public function loadFromFile (string $file);
 
   /**
    * Loads the contents of the given string
@@ -52,7 +50,7 @@ interface LoaderInterface
    *
    * @throws LoaderException When the JSON is invalid or cannot be loaded
    */
-  public function loadFromString(string $json);
+  public function loadFromString (string $json);
 
   /**
   * Buildsan XRD object based on the structure of the argument
@@ -61,25 +59,25 @@ interface LoaderInterface
   *
   * @return void
   */
-  public function build(stdClass $object);
+  public function build ($object);
 
   /**
    * Loads the Property elements
    *
-   * @param object $store Data store where the properties get stored
-   * @param object $j     JSON element with "properties" variable
+   * @param PropertyListAccess $store Data store where the properties get saved
+   * @param object             $j     An object with "properties" property
    *
    * @return boolean True when all went well
    */
-  protected function loadProperties (PropertyAccess $store, stdClass $j);
+  protected function loadProperties (PropertyListAccess $store, $j);
 
   /**
-   * Create a link element object from XML element
+   * Creates a link element object
    *
-   * @param stdClass $j JSON link object
+   * @param object $j
    *
    * @return Link Created link object
    */
-  protected function loadLink (stdClass $j);
+  protected function loadLink ($j);
 
 }
