@@ -16,7 +16,7 @@
  * @version 0.1.0
  */
 
-namespace App\Loader;
+namespace AssembleeVirtuelle\ManaBundle\XRD\Loader;
 
 interface LoaderInterface
 {
