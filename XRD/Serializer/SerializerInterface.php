@@ -18,5 +18,11 @@ namespace AssembleeVirtuelle\ManaBundle\XRD\Serializer;
 
 interface SerializerInterface
 {
+  /**
+   * Converts an object to string.
+   * PHP magical method, called when attempting to display or print an object.
+   *
+   * @return string A string format of XRD objects
+   */
   public function __toString();
 }
