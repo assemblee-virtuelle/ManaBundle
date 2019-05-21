@@ -34,7 +34,7 @@ class JsonSerializer extends AbstractSerializer
         $attrValue = $this->xrd->$attribute;
         switch ($attribute) {
           case 'expires':
-            $attrArray['expires'] = (new \DateTime($attrValue))->format('Y-m-d\TH:i:s\Z');
+            $attrArray['expires'] = (new \DateTime($attrValue, new DateTimeZone('Europe/London')))->format('Y-m-d\TH:i:s\Z');
             break;
 
           case 'subject':
@@ -97,7 +97,6 @@ class JsonSerializer extends AbstractSerializer
           default:
         }
       }
-      // code...
     }
 
     return json_encode($attrArray);
