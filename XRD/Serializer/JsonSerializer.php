@@ -23,8 +23,6 @@ use AssembleeVirtuelle\XRD\Exception\LoaderException;
 
 class JsonSerializer extends AbstractSerializer
 {
-  const XRD_ATTRIBUTES = ['expires', 'subject', 'aliases', 'properties', 'links'];
-  const LINK_ATTRIBUTES = ['rel', 'href', 'type', 'properties', 'titles', 'templates'];
 
   public function __toString()
   {
