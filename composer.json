@@ -1,5 +1,5 @@
 {
-    "name": "assembleevirtuelle/mana-bundle",
+    "name": "assembleevirtuelle/manabundle",
     "description": "Webfinger integration for Symfony",
     "type": "symfony-bundle",
     "version": "0.1.0-dev",
