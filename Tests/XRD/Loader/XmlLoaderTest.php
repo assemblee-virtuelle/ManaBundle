@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 use AssembleeVirtuelle\ManaBundle\XRD\Serializer\Serializer;
 use AssembleeVirtuelle\ManaBundle\XRD\Loader\LoaderFactory;
 use AssembleeVirtuelle\ManaBundle\XRD\Loader\XmlLoader;
-use AssembleeVirtuelle\ManaBundle\XRD\XRD\XRD;
+use AssembleeVirtuelle\ManaBundle\XRD\XRD;
 use AssembleeVirtuelle\ManaBundle\XRD\Element\Link;
 use AssembleeVirtuelle\ManaBundle\XRD\Element\Property;
 use AssembleeVirtuelle\ManaBundle\Exception\LoaderException;

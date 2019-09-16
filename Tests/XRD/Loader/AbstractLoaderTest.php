@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Tests\Loader;
+namespace AssembleeVirtuelle\ManaBundle\Tests\Loader;
 
-use App\Loader\AbstractLoader;
-use App\Loader\JsonLoader;
-use App\Exception\LoaderException;
-use App\XRD\XRD;
+use AssembleeVirtuelle\ManaBundle\XRD\Loader\AbstractLoader;
+use AssembleeVirtuelle\ManaBundle\XRD\Exception\LoaderException;
+use AssembleeVirtuelle\ManaBundle\XRD\XRD;
+use AssembleeVirtuelle\ManaBundle\XRD\Loader\JsonLoader;
 
 use PHPUnit\Framework\TestCase;
 

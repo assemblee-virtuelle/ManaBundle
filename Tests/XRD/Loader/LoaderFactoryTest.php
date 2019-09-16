@@ -5,10 +5,10 @@ namespace AssembleeVirtuelle\ManaBundle\Tests\XRD\Loader;
 use PHPUnit\Framework\TestCase;
 
 use AssembleeVirtuelle\ManaBundle\Serializer\Serializer;
-use AssembleeVirtuelle\ManaBundle\Loader\LoaderFactory;
-use AssembleeVirtuelle\ManaBundle\Loader\JsonLoader;
-use AssembleeVirtuelle\ManaBundle\Loader\XmlLoader;
-use AssembleeVirtuelle\ManaBundle\Exception\LoaderException;
+use AssembleeVirtuelle\ManaBundle\XRD\Loader\LoaderFactory;
+use AssembleeVirtuelle\ManaBundle\XRD\Loader\JsonLoader;
+use AssembleeVirtuelle\ManaBundle\XRD\Loader\XmlLoader;
+use AssembleeVirtuelle\ManaBundle\XRD\Exception\LoaderException;
 use AssembleeVirtuelle\ManaBundle\XRD\XRD;
 
 class LoaderFactoryTest extends TestCase
