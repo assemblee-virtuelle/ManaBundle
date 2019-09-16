@@ -16,7 +16,7 @@
  * @version 0.1.0
  */
 
- namespace AssembleeVirtuelle\ManaBundle\Loader;
+ namespace AssembleeVirtuelle\ManaBundle\XRD\Loader;
 
  use AssembleeVirtuelle\ManaBundle\XRD\Element\Link;
  use AssembleeVirtuelle\ManaBundle\XRD\Element\Property;

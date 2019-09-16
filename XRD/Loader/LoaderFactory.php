@@ -15,13 +15,13 @@
  * @version 0.1.0
  */
 
-namespace AssembleeVirtuelle\ManaBundle\Loader;
+namespace AssembleeVirtuelle\ManaBundle\XRD\Loader;
 
 use LoaderInterface as Loader;
 use AssembleeVirtuelle\ManaBundle\XRD\Loader\JsonLoader;
 use AssembleeVirtuelle\ManaBundle\XRD\Loader\XmlLoader;
 use AssembleeVirtuelle\ManaBundle\XRD\XRD;
-use AssembleeVirtuelle\ManaBundle\Exception\LoaderException;
+use AssembleeVirtuelle\ManaBundle\XRD\Exception\LoaderException;
 
 class LoaderFactory
 {

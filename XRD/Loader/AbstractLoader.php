@@ -16,12 +16,12 @@
  * @version 0.1.0
  */
 
-namespace App\Loader;
+namespace AssembleeVirtuelle\ManaBundle\XRD\Loader;
 
-use App\Element\Link;
-use App\Element\Property;
-use App\XRD\XRD;
-use App\Exception\LoaderException;
+use AssembleeVirtuelle\ManaBundle\Element\Link;
+use AssembleeVirtuelle\ManaBundle\Element\Property;
+use AssembleeVirtuelle\ManaBundle\XRD\XRD;
+use AssembleeVirtuelle\ManaBundle\Exception\LoaderException;
 
 /*
  * Loaders are in charge of retrieving, validating and parsing XRD resources.

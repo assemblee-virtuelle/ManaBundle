@@ -12,6 +12,16 @@ use AssembleeVirtuelle\ManaBundle\XRD\Loader\LoaderFactory;
 class XRD {
 
   /**
+   *
+   */
+  const XRD_STRING_SOURCE = 0;
+
+  /**
+  *
+  */
+  const XRD_FILE_SOURCE = 1;
+
+  /**
    * XRD file/string loading dispatcher
    *
    * @var XML_XRD_Loader

@@ -16,9 +16,11 @@
  * @version 0.1.0
  */
 
-namespace AssembleeVirtuelle\XRD\Loader;
+namespace AssembleeVirtuelle\ManaBundle\XRD\Loader;
 
 use AssembleeVirtuelle\ManaBundle\Exception\LoaderException;
+use AssembleeVirtuelle\ManaBundle\XRD\Element\Link;
+use AssembleeVirtuelle\ManaBundle\XRD\Element\Property;
 
 class XmlLoader extends AbstractLoader implements LoaderInterface
 {
