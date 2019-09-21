@@ -6,7 +6,7 @@ namespace AssembleeVirtuelle\ManaBundle\XRD;
 
 use AssembleeVirtuelle\ManaBundle\XRD\Exception\LogicException;
 
-class PropertyAccess implements \ArrayAccess
+abstract class PropertyAccess implements \ArrayAccess
 {
     /**
      * Array of property objects
