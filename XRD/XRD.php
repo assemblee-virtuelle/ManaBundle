@@ -2,14 +2,14 @@
 
 namespace AssembleeVirtuelle\ManaBundle\XRD;
 
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Symfony\Component\Serializer\Encoder\XmlEncoder;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-use Symfony\Component\Serializer\Serializer;
-
+use AssembleeVirtuelle\ManaBundle\XRD\Serializer\SerializerFactory;
+//use Symfony\Component\Serializer\Encoder\JsonEncoder;
+//use Symfony\Component\Serializer\Encoder\XmlEncoder;
+//use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use AssembleeVirtuelle\ManaBundle\XRD\Loader\LoaderFactory;
 
-class XRD {
+class XRD extends PropertyAccess implements \IteratorAggregate
+{
 
   /**
    *
@@ -72,12 +72,12 @@ class XRD {
   public $id;
 
 
-public function __construct(Serializer $serializer, LoaderFactory $loaderFactory)
+public function __construct(SerializerFactory $serializerFactory, LoaderFactory $loaderFactory)
 {
-  $encoders = [new XmlEncoder(), new JsonEncoder()];
-  $normalizers = [new ObjectNormalizer()];
+//  $encoders = [new XmlEncoder(), new JsonEncoder()];
+//  $normalizers = [new ObjectNormalizer()];
 
-  $this->serializer = new Serializer($normalizers, $encoders);
+//  $this->serializer = new Serializer($normalizers, $encoders);
 
   $this->loader = $loaderFactory;
 }
