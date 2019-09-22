@@ -58,13 +58,4 @@ final class Property
 
       throw new \Exception('Properties only know ‘type’ and ‘value’ properties');
     }
-
-    public function __set($property, $value)
-    {
-      if (\in_array($property, ['type', 'value'])) {
-        return $this->$property = $value;
-      }
-
-      throw new \Exception('Properties only know ‘type’ and ‘value’ properties');
-    }
 }
