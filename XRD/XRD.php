@@ -2,11 +2,13 @@
 
 namespace AssembleeVirtuelle\ManaBundle\XRD;
 
+use AssembleeVirtuelle\ManaBundle\XRD\Loader\LoaderInterface;
 use AssembleeVirtuelle\ManaBundle\XRD\Serializer\SerializerFactory;
 //use Symfony\Component\Serializer\Encoder\JsonEncoder;
 //use Symfony\Component\Serializer\Encoder\XmlEncoder;
 //use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use AssembleeVirtuelle\ManaBundle\XRD\Loader\LoaderFactory;
+use AssembleeVirtuelle\ManaBundle\XRD\Serializer\SerializerInterface;
 
 class XRD extends PropertyAccess implements \IteratorAggregate
 {
@@ -24,14 +26,14 @@ class XRD extends PropertyAccess implements \IteratorAggregate
   /**
    * XRD file/string loading dispatcher
    *
-   * @var XML_XRD_Loader
+   * @var LoaderInterface
    */
   public $loader;
 
   /**
    * XRD serializing dispatcher
    *
-   * @var Serializer
+   * @var SerializerInterface
    */
   public $serializer;
 
@@ -82,9 +84,9 @@ public function __construct(SerializerFactory $serializerFactory, LoaderFactory 
   $this->loader = $loaderFactory;
 }
 
-public function load(string $source, int $type = XRD_FILE, string $format = 'xml')
+public function load(string $source, ?int $type = self::XRD_FILE_SOURCE, ?string $format = 'xml')
 {
-  $loader = $this->loader->create($format);
+  $loader = $this->loader->create($this, $source, $type, $format);
   $response = $loader->load($source, $type);
 }
 
