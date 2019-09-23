@@ -37,7 +37,7 @@ final class Link extends PropertyAccess
      *
      * @var array
      */
-    public $titles = array();
+    private $titles = array();
 
     /**
      * Create a new instance and load data from the XML element
@@ -51,12 +51,12 @@ final class Link extends PropertyAccess
     public function __construct($rel = null, $href = null, $type = null, $isTemplate = false)
     {
         $this->rel = $rel;
+        $this->type = $type;
         if ($isTemplate) {
             $this->template = $href;
         } else {
             $this->href = $href;
         }
-        $this->type = $type;
     }
 
     /**
@@ -86,14 +86,28 @@ final class Link extends PropertyAccess
         return reset($this->titles);
     }
 
-    public function __get($key)
+    /**
+     * Add a title in a given language tothe list of titles.
+     * This function works to update a title.
+     *
+     * @param string $language
+     * @param string $title
+     *
+     * @example setTitle('fr','Profil de M. X')
+     */
+    public function setTitle(string $language, string $title)
+    {
+        $this->titles[$language] = $title;
+    }
+
+    public function __get(string $key)
     {
         if (in_array($key, ['rel', 'type', 'href', 'template'])) {
             return $this->$key;
         }
     }
 
-    public function __set($key, $value)
+    public function __set(string $key, string $value)
     {
         if (in_array($key, ['rel', 'type', 'href', 'template'])) {
             $this->$key = $value;
